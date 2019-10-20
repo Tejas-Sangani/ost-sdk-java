@@ -17,22 +17,25 @@ public class OSTSDKTest {
     @Before
     public void setUp() throws Exception {
 
-
+        // get the ost kit api key from environment.
         String apiKey = System.getenv("OST_KIT_API_KEY");
         if ( null == apiKey ) {
             throw new Exception("Environment Variable OST_KIT_API_KEY is not set.");
         }
-
+        
+        // get the ost kit api secret from environment.
         String apiSecret = System.getenv("OST_KIT_API_SECRET");
         if ( null == apiSecret ) {
             throw new Exception("Environment Variable OST_KIT_API_SECRET is not set.");
         }
-
+        
+        // get the ost kit api endpoint from environment.
         String v0Endpoint = System.getenv("OST_KIT_API_ENDPOINT");
         if ( null == v0Endpoint ) {
             throw new Exception("Environment Variable OST_KIT_API_ENDPOINT is not set.");
         }
-
+        
+        // get the ost kit api endpoint for v1 version from environment.
         String v1Endpoint = System.getenv("OST_KIT_API_V1_ENDPOINT");
         if ( null == v1Endpoint ) {
             throw new Exception("Environment Variable OST_KIT_API_V1_ENDPOINT is not set.");
